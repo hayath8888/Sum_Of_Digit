@@ -1,0 +1,31 @@
+import java.util.Scanner;
+public class Main
+{
+  public static void main (String[]args)
+  {
+    Scanner sc = new Scanner (System.in);
+    int digit = sc.nextInt ();
+
+    int result = sumOfDigit (digit);
+      System.out.println (result);
+  }
+  public static int sumOfDigit (int digit)
+  {
+    int rem, sum = 0;
+    if (digit < 10)
+      {
+	return -1;
+      }
+    else
+      {
+	while (digit > 0)
+	  {
+	    rem = digit % 10;
+	    sum = sum + rem;
+	    digit /= 10;
+	  }
+	return sum;
+      }
+
+  }
+}
